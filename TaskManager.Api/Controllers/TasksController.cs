@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using TaskManager.Api.Models;
 using TaskManager.Api.Repositories;
 using ModelsTaskStatus = TaskManager.Api.Models.TaskStatus;
@@ -31,6 +31,7 @@ namespace TaskManager.Api.Controllers
         public ActionResult<TaskItem> Create(TaskItem task)
         {
             var created = _repository.Create(task);
+            Console.WriteLine("Creating task (MASTER VERSION)");
             return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
         }
 
