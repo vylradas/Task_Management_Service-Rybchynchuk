@@ -47,6 +47,7 @@ namespace TaskManager.Api.Controllers
             task.Status = (TaskManager.Api.Models.TaskStatus)newStatus;
             _repository.Update(task);
 
+            Console.WriteLine("Task status updated");
             return Ok(task);
         }
 
