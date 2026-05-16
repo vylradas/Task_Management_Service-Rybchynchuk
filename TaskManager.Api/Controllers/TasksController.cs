@@ -30,8 +30,8 @@ namespace TaskManager.Api.Controllers
         [HttpPost]
         public ActionResult<TaskItem> Create(TaskItem task)
         {
-            var created = _repository.Create(task);
-            Console.WriteLine("Creating task (MASTER VERSION)");
+            var created = _repository.Create(task);;
+            Console.WriteLine("Task creation logged");
             return CreatedAtAction(nameof(Get), new { id = created.Id }, created);
         }
 
