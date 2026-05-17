@@ -46,4 +46,4 @@ curl "https://localhost:7143/api/tasks"
 ```bash
 curl -X PATCH "https://localhost:7143/api/tasks/{id}/status?newStatus=InWork"
 ```
-
+### У репозиторії налаштовано CI-пайплайн для автоматичної збірки, тестування, лінтингу та аналізу безпеки коду при кожному Pull Request.
