@@ -27,5 +27,8 @@ jobs:
     - name: Run unit tests
       run: dotnet test --no-build
 
-    - name: Run formatting check
+    - name: Run formatting check (Linting)
       run: dotnet format --verify-no-changes
+
+    - name: Run Security Scan (Check vulnerabilities)
+      run: dotnet list package --vulnerable --include-transitive
