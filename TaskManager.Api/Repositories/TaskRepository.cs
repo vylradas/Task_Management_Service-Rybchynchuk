@@ -18,7 +18,7 @@ namespace TaskManager.Api.Repositories
         public TaskItem Create(TaskItem task)
         {
             task.Id = Guid.NewGuid();
-            task.Status = ModelsTaskStatus.Backlog; // статус за замовчуванням
+            task.Status = ModelsTaskStatus.InWork; // статус за замовчуванням
             _tasks.Add(task);
             return task;
         }
