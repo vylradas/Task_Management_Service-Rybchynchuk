@@ -38,7 +38,7 @@ namespace TaskManager.Tests
 
             // Assert
             var updated = repo.GetById(task.Id);
-            Assert.Equal(ModelsTaskStatus.Done, updated.Status);
+            Assert.Equal(ModelsTaskStatus.Done, updated.Status); // повернення Done
         }
 
         [Fact]
